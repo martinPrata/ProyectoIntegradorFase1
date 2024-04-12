@@ -10,7 +10,7 @@ Este proyecto consiste en un buscador de películas que permite buscar película
 - Git
 
 ## Script de la base de datos
-Adjunto en el directorio "query".
+Adjunto el "query.txt".
 
 ## Versión de Java utilizada
 Java 11

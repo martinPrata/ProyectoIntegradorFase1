@@ -1,0 +1,25 @@
+CREATE DATABASE IF NOT EXISTS integradorFase1;
+
+USE integradorFase1;
+
+CREATE TABLE peliculas (
+    codigo INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL,
+    url VARCHAR(255) NOT NULL,
+    imagen VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE generos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE pelicula_genero (
+    codigo_pelicula INT,
+    id_genero INT,
+    PRIMARY KEY (codigo_pelicula, id_genero),
+    FOREIGN KEY (codigo_pelicula) REFERENCES peliculas(codigo),
+    FOREIGN KEY (id_genero) REFERENCES generos(id)
+);
+

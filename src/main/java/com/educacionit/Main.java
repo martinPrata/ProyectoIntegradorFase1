@@ -7,9 +7,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		String url = "jdbc:mysql://localhost:3306/integradorFase1";
-		String usuario = "root";
-		String contraseña = "42915204110821";
-		PeliculaDAO peliculaDAO = new PeliculaDAO(url,usuario,contraseña);
+		String usuario = "usuario";
+		String contraseña = "contraseña";
+		PeliculaDAO peliculaDAO = new PeliculaDAOImpl(url, usuario, contraseña);
 		 InterfazUsuario interfazUsuario = new InterfazUsuario(peliculaDAO);
 
 	        Scanner scanner = new Scanner(System.in);
